@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <h1>{{ title }} is woking</h1>
 </head>
 <body>
-
+ {% comment %}{% for obj in object_list %}
+    { obj.title}</br>
+    { obj.content }</br>
+    { obj.timestamp }</br>
+    { obj.updated }</br>
+    { obj.id }</br>
+    {% endof %}{% endcomment %}
 </body>
 </html>
