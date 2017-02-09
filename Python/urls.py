@@ -20,7 +20,7 @@ from posts.views import post_create, post_detail, post_list, post_update, post_d
 urlpatterns = [
     url(r'^create/$', post_create),
     url(r'^admin/', admin.site.urls),
-    url(r'^detail/$', post_detail),
+    url(r'^detail/(?P<id>\d+)/$', post_detail, name='detail'),
     url(r'^list/$', post_list),
     url(r'^update/$', post_update),
     url(r'^delete/$', post_delete),

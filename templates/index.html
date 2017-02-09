@@ -2,15 +2,17 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+
 </head>
 <body>
- {% comment %}{% for obj in object_list %}
-    { obj.title}</br>
-    { obj.content }</br>
-    { obj.timestamp }</br>
-    { obj.updated }</br>
-    { obj.id }</br>
-    {% endof %}{% endcomment %}
+<h1>{{title}}</h1>
+ {% for obj in object_list %}
+     {% url "detail" id=obj.id %}
+    <a href={{ obj.get_absolute_url }}> {{ obj.title}}</a>
+     <p>{{   obj.content }}</p>
+     <p>{{  obj.timestamp }}<p/>
+     <p>{{ obj.updated }} </p>
+     <p>{{  obj.id }} </p>
+    {% endfor %}
 </body>
 </html>
