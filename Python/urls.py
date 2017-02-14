@@ -22,6 +22,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^detail/(?P<id>\d+)/$', post_detail, name='detail'),
     url(r'^list/$', post_list),
-    url(r'^update/$', post_update),
+    url(r'^edit/(?P<id>\d+)/$', post_update, name='edit'),
     url(r'^delete/$', post_delete),
 ]
